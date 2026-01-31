@@ -14,8 +14,11 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware('auth.check')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'show'])->name('showProfile');
-    Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profileEdit', [ProfileController::class, 'showEdit'])->name('profile.showEdit');
+    Route::get('/profile/image', [ProfileController::class, 'showImage'])->name('profile.showImage');
+    Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profile/image', [ProfileController::class, 'updateImage'])->name('profile.updateImage');
 });
 Route::middleware('auth.check')->group(function () {
     Route::resource('tasks', TaskController::class);

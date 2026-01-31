@@ -7,9 +7,9 @@
 @endsection
 
 @section('content')
-    <div class="form-container">
-        <h1>Sign Up</h1>
-        <form method="POST" action="{{ route('register') }}" style="max-width: 800px; margin: 0 auto;">
+    <div style="width: 400px; margin: 0 auto;">
+        <h2>Sign Up</h2>
+        <form method="POST" action="{{ route('register') }}" style="max-width: 800px; margin: 0 auto; padding: 20px">
             @csrf
 
             <div style="margin-bottom: 1.5rem;">
@@ -23,7 +23,7 @@
                 @enderror
             </div>
 
-            <div style="margin-bottom: 1.5rem;">
+            <div style="margin-bottom: 1.5rem; padding:]">
                 <label style="display: block; margin-bottom: 0.5rem; color: #a0d5f1; font-weight: 500;">Email</label>
                 <input type="email" name="email"
                     style="width: 100%; padding: 0.8rem; background: rgba(40, 40, 40, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 5px; color: white; font-size: 1rem;"
@@ -63,4 +63,5 @@
             </button>
         </form>
     </div>
+
 @endsection

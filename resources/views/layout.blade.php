@@ -146,9 +146,9 @@
         }
 
         h2 {
-            color: #71b6e3;
-            margin: 1.5rem 0 1rem;
-            font-weight: 600;
+            color: #88c1f4;
+            margin: 1rem 0;
+            font-weight: 500;
         }
 
         h3 {
@@ -249,7 +249,27 @@
                 font-size: 2rem;
             }
         }
-        
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4babeb !important;
+            box-shadow: 0 0 0 2px rgba(75, 171, 235, 0.2) !important;
+        }
+
+        button:hover,
+        a:hover {
+            transform: translateY(-2px);
+        }
+
+        button:hover {
+            box-shadow: 0 5px 15px rgba(75, 171, 235, 0.3);
+        }
+
+        a:hover {
+            background: rgba(60, 60, 60, 0.8) !important;
+            color: #ffffff !important;
+        }
     </style>
 
 </head>
