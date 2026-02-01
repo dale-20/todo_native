@@ -291,7 +291,7 @@
                 </ul>
             @else
                 <ul>
-                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('tasks.index') }}">Home</a></li>
                 </ul>
             @endif
         </div>

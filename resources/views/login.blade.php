@@ -37,14 +37,6 @@
                 @enderror
             </div>
 
-            <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                <label style="display: flex; align-items: center; gap: 0.5rem; color: #a0d5f1; cursor: pointer;">
-                    <input type="checkbox" name="remember" style="width: 1rem; height: 1rem;">
-                    <span>Remember me</span>
-                </label>
-
-            </div>
-
             <button type="submit" class="btn" style="width: 100%; margin-bottom: 1.5rem;">
                 <i class="fas fa-sign-in-alt"></i> Sign In
             </button>
