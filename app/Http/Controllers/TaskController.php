@@ -12,7 +12,7 @@ class TaskController extends Controller
 
     public function index()
     {
-        $tasks = Task::where('user_id', Session::get('user_id'))->get();
+        $tasks = Task::withTrashed()->where('user_id', Session::get('user_id'))->get();
         return view('tasks.index', compact('tasks'));
     }
 

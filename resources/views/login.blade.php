@@ -10,6 +10,14 @@
 
 @section('content')
     <div style="width: 400px; margin: 0 auto;">
+        @if(session('error'))
+            <div
+                style="background: rgba(244, 67, 54, 0.2); color: #ff6b6b; padding: 1rem; 
+                                                            border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #ff6b6b;">
+                <p style="margin: 0.25rem 0;"><i class="fas fa-exclamation-circle"></i> {{ session('error') }}</p>
+
+            </div>
+        @endif
         <h2>Login</h2>
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -32,8 +40,7 @@
                     style="width: 100%; padding: 0.8rem; background: rgba(40, 40, 40, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 5px; color: white; font-size: 1rem;"
                     required>
                 @error('password')
-                    <span
-                        style="color: #ff6b6b; font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                    <span style="color: #ff6b6b; font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $error }}</span>
                 @enderror
             </div>
 
